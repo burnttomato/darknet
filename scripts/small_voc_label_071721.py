@@ -53,8 +53,8 @@ for year, image_set in sets:
     list_file = open('%s_%s.txt'%(year, image_set), 'w')
     
     #for image_id in image_ids:
-    for (image_id < 10) in image_ids:
-   
+    #for (image_id < 10) in image_ids:
+    for image_id in islice(image_ids,3 ):
         list_file.write('%s/VOCdevkit/VOC%s/JPEGImages/%s.jpg\n'%(wd, year, image_id))
         convert_annotation(year, image_id)
         
